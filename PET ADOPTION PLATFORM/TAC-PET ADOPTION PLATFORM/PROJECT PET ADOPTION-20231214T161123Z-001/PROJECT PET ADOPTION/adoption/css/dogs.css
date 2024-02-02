@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Chillax", sans-serif;
+  }
+  
+  header {
+    height: 75px;
+    background-color: #284e63;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 25px;
+    color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    line-height: 0.9;
+    font-size: 20px;
+  }
+  
+  #beehive {
+    height: 55px;
+    margin-right: 10px;
+  }
+  
+  nav {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+  }
+  .nav-link {
+    /* Your existing styles for nav-link */
+    text-decoration: none; /* Remove underline */
+    color: #74c8df; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+
+  .nav-link:hover {
+    color: #007BFF; /* Change text color on hover */
+  }
+ 
+  main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(68, 98, 117);
+    overflow: hidden; /* Hide the overflow to create a scroll effect */
+    height: calc(100vh - 75px); /* Adjust height based on your header height */
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #212121;
+    color: white;
+    border-radius: 10px;
+    font-family: "Chillax", sans-serif;
+  }
+  
+  input {
+    font-family: "Chillax", sans-serif;
+    width: 120px;
+  }
+  
+  .animal-card {
+    height: 400px; /* Adjust the height as needed */
+    width: 200px; /* Adjust the width as needed */
+    margin: 10px; /* Add margin for spacing */
+    color: white;
+    background-color: #284B63;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .animal-profile-pic {
+    height: 160px; /* Adjust the height as needed */
+    width: 160px; /* Adjust the width as needed */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .wish {
+    background-color: rgb(33, 33, 33);
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wish-btn:hover {
+    color: white;
+    box-shadow: 0 0 15px #212121;
+  }
+  
+  button:hover {
+    box-shadow: 0 0 15px #212121;
+  }
+  .animal-card:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+    box-shadow: 0 0 100px #72c6f4 ; /* Add a subtle shadow */
+  }
+  
+  .animal-card:hover .animal-profile-pic {
+    filter: grayscale(100%); /* Convert the image to grayscale on hover */
+  }
+  
+  .animal-card:hover h2,
+  .animal-card:hover button {
+    opacity: 1; /* Make the text and button visible on hover */
+  }
+  
+  .animal-card:hover button {
+    background-color: #72c6f4;
+    color: #212121; /* Change button text color on hover */
+  }
+  

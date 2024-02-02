@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="css/donate.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="headerTitle">Dog Donation Page</h1>
+        <nav></nav>
+    </header>
+    <div class="content">
+
+        <div class="formContainer">
+            <form>
+                <h2>Enter Dog Information</h2> <br>Name:<br>
+
+                <input class="" type="text">
+                <br>Species:<br>
+                <select class="species" name="species" onChange="">
+                    <option value="Dog Species 1">Labrador Retriever </option>
+                    <option value="Dog Species 2">English Mastiff </option>
+                    <option value="Dog Species 3">Great Dane</option>
+                    <option value="Dog Species 4">Poodle</option>
+                    <option value="Dog Species 5">Bulldog </option>
+                    <option value="Dog Species 6">Siberian Husky </option>
+                    <option value="Dog Species 7">German Shepherd </option>
+                    <option value="Dog Species 8">Beagle</option>
+                    <option value="Dog Species 9">Golden Retriever </option>
+                </select>
+                <br>Age:<br>
+                <select class="age">
+                    <option value="Dog Species 1">1</option>
+                    <option value="Dog Species 2">2 </option>
+                    <option value="Dog Species 3">3</option>
+                    <option value="Dog Species 4">4</option>
+                    <option value="Dog Species 5">5</option>
+                    <option value="Dog Species 6">6</option>
+                    <option value="Dog Species 7">7</option>
+                    <option value="Dog Species 8">8</option>
+                    <option value="Dog Species 9">9</option>
+                    <option value="Dog Species 9">10</option>
+                </select>
+                <br>Location:<br>
+                <input class="location" type="text">
+                <br>Comments<br>
+                <textarea type="text" class="comments"></textarea>
+                <input type="reset">
+            </form>
+            <input type="file" id="fileInput" style="display: none;" />
+            <button class="submitBtn" onclick="addDog()">Add</button>
+            <input type="file" id="fileInput" style="display: none;" />
+            <button class="uploadBtn" onclick="document.getElementById('fileInput').click();">Upload Photo</button>
+        </div>
+    </div>
+
+   
+    <div class="addedPets">
+        <h2>Added Dog</h2>
+        <h3>*Click on pet to view additional details</h3>
+        <div class="petContainer"></div>
+    </div>
+    <div class="layOver">
+        <div class="layOverContent"></div>
+    </div>
+    <footer class="mainFooter">
+        <p>2016</p>
+    </footer>
+    <script type="text/javascript" src="js/donate.js"></script>
+    <script>
+        function addDog() {
+
+            var name = $("input[type='text']").val();
+            var species = $(".species").val();
+            var age = $(".age").val();
+            var location = $(".location").val();
+            var comments = $(".comments").val();
+            var file = $("#fileInput")[0].files[0];
+
+           
+            var newPet = $("<div class='pet'>").html("<p>Name: " + name + "</p><p>Species: " + species + "</p><p>Age: " + age + "</p><p>Location: " + location + "</p><p>Comments: " + comments + "</p>");
+
+            
+            $(".petContainer").append(newPet);
+
+        
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var img = $("<img>").attr("src", e.target.result).attr("alt", "Selected Photo");
+                    $(".petContainer").append(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+
+</html>

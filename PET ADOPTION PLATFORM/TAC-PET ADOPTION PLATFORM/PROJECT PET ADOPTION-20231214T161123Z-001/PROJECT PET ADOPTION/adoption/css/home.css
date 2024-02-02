@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700;1,800;1,900&display=swap");
+
+h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+a {
+  color: #20b2aa;
+  text-decoration: none;
+}
+
+.page {
+  font-family: "Poppins", sans-serif;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* Nav Bar */
+.avatar {
+  width: 3em;
+  height: auto;
+}
+
+.container-header {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  align-items: center;
+  list-style-type: none;
+  color: rgb(93, 93, 93) !important;
+}
+
+.nav-item-wrapper {
+  margin-right: 20px;
+}
+
+.header-menu-wrapper {
+  display: flex;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.navbar-brand {
+  margin-right: 100px;
+  font-size: 40px;
+  color: #20b2aa !important;
+}
+
+.form-control {
+  border-radius: 100px;
+  border-color: #20b2aa !important;
+}
+
+#search-btn {
+  border-color: #20b2aa !important;
+  border-radius: 100px !important;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+}
+
+#list {
+  padding-top: 20px;
+}
+
+/*Introduction Page*/
+
+.intro-box {
+  margin-top: 100px;
+  padding-right: 60px;
+  padding-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.intro-wrapper {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+.intro-Pic {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+#pic-intro {
+  width: 60%; 
+  height: 60%; 
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+}
+
+.get-started {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 35%;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.5s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pink {
+  background-color: #ffc8c8;
+  color: #000000;
+}
+
+center {
+  font-size: 0.8em;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.9s;
+}
+
+.btn-pink:after {
+  background-color: #f3d2ff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 6s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/*Search Expaned Button*/
+.search-expand-bar {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.btn-group {
+  cursor: pointer;
+  width: 100%;
+}
+
+.menuButton {
+  background-color: White;
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  font-size: 60%;
+  height: 40px;
+  width: 20%;
+}
+
+#option1 {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+#option6 {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.active {
+  background-color: #e0e0e0 !important;
+}
+
+.menuButton:hover {
+  background-color: #ebebeb !important;
+}
+
+.search-icon {
+  width: 15%; 
+}
+
+.adopt-today-wrapper {
+  margin-top: 40px;
+}
+
+/*Home-info-Page*/
+.title-wrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-pet-today {
+  background-color: White;
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  margin-left: 10px;
+}
+
+.more-information-wrapper {
+  background-color: #9fa988;
+  margin-top: 60px;
+  padding: 30px;
+}
+
+/* Map Page */
+.map-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.map-search {
+  width: 25px;
+}
+
+.search-button-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Type Page */
+.type-bar {
+  margin-left: 10rem;
+  margin-right: 40px;
+}
+
+#option-Dog {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+#option-Dog:hover {
+  background: #ebebeb;
+}
+
+#option-Cat:hover {
+  background: #ebebeb;
+}
+
+#option-Cat {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#dog-icon {
+  width: 8em;
+  height: 6em;
+  margin-bottom: 10px;
+}
+
+#cat-icon {
+  width: 8em;
+  height: 6em;
+  margin-bottom: 10px;
+}
+
+.typebutton {
+  background-color: White;
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  font-size: 60%;
+  height: 110px;
+}
+
+.type-name {
+  display: flex;
+  justify-content: center;
+}
+
+/*Gender Page*/
+.gender-bar {
+  margin-left: 16rem;
+}
+
+#option-male {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+#option-male:hover {
+  background: #ebebeb;
+}
+
+#option-female:hover {
+  background: #ebebeb;
+}
+
+#option-female {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/*Calander Page*/
+#calendar {
+  width: 600px;
+  height: 400px;
+}
+
+.calander-pic {
+  display: flex;
+  justify-content: center;
+}
+
+/*Personality*/
+#option-P {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+#option-male:hover {
+  background: #ebebeb;
+}
+
+#option-female:hover {
+  background: #ebebeb;
+}
+
+#option-E {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/**/
+
+.card {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+figure {
+  width: 100%;
+}
+.result-p {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+figure figcaption {
+  text-align: center;
+}
+
+.info-des-result {
+  margin-top: 20px;
+}
+
+/*Individual Pictures*/
+.corgi-pic {
+  width: 100%;
+  height: 150px;
+}
+
+.arrow {
+  height: 50px;
+}
+
+.name-box {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.cha-box {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.cha1 {
+  margin-bottom: 10px;
+}
+
+.characters {
+  background-color: White;
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.button-pet {
+  display: flex;
+  justify-content: center;
+}
+
+.more-info-box {
+  margin-left: 20px;
+}
